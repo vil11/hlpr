@@ -1,6 +1,6 @@
 {
   "name": "vil11/hlpr",
-  "version": "1.3.2",
+  "version": "1.3.5",
   "minimum-stability": "dev",
   "description": "PHP micro-functional helper.",
   "type": "package"
