@@ -1,0 +1,1 @@
+PHP micro-functional helper.
