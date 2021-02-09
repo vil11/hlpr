@@ -1,5 +1,7 @@
 <?php
 
+namespace HLPR;
+
 class HDirectory
 {
     public const DS = '/';
