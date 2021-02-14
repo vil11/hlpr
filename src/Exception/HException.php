@@ -1,5 +1,8 @@
 <?php
 
+namespace HLPR\Exception;
+
+use Exception;
 
 class HException extends Exception
 {

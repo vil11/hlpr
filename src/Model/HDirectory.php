@@ -1,6 +1,8 @@
 <?php
 
-namespace HLPR;
+namespace HLPR\Model;
+
+use HLPR\Exception\HException;
 
 class HDirectory
 {
@@ -20,6 +22,10 @@ class HDirectory
         return $this->path;
     }
 
+    /**
+     * @return array
+     * @throws HException
+     */
     public function getFilesList(): array
     {
         $this->checkDirExists();
@@ -36,6 +42,10 @@ class HDirectory
         return $files;
     }
 
+    /**
+     * @return array
+     * @throws HException
+     */
     public function getDirsList(): array
     {
         $this->checkDirExists();
@@ -52,6 +62,9 @@ class HDirectory
         return $dirs;
     }
 
+    /**
+     * @throws HException
+     */
     private function checkDirExists(): void
     {
         if (!is_dir($this->path)) {
