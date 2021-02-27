@@ -18,6 +18,16 @@
     "phpunit/phpunit": "^6"
   },
   "autoload": {
+    "files": [
+      "function/array.php",
+      "function/directory.php",
+      "function/exception.php",
+      "function/metadata.php",
+      "function/query.php",
+      "function/read.php",
+      "function/string.php",
+      "function/url.php"
+    ],
     "psr-4": {
       "HLPR\\": "src/"
     }
