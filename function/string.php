@@ -183,7 +183,7 @@ function getPathSectionBackwards(string $path, int $sectionPositionBackwards = 1
 function parsePath(string $path, string $divider = '/'): array
 {
     $path = bendSeparatorsRight($path);
-    if ($path{strlen($path) - strlen($divider)} === $divider) {
+    if ($path[strlen($path) - strlen($divider)] === $divider) {
         $path = substr($path, 0, -strlen($divider));
     }
 
