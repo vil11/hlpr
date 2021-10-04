@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27d29094da71438c6d6f046be2a7db0b",
+    "content-hash": "e3df3b846ccc41d5e54cfc9dcb05c0e9",
     "packages": [
         {
             "name": "james-heinrich/getid3",
-            "version": "v1.9.20",
+            "version": "v1.9.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JamesHeinrich/getID3.git",
-                "reference": "3c15e353b9bb1252201c73394bb8390b573a751d"
+                "reference": "36f5dabb1325415a4b07a401113f8db2eb81eca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/3c15e353b9bb1252201c73394bb8390b573a751d",
-                "reference": "3c15e353b9bb1252201c73394bb8390b573a751d",
+                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/36f5dabb1325415a4b07a401113f8db2eb81eca1",
+                "reference": "36f5dabb1325415a4b07a401113f8db2eb81eca1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "jakub-onderka/php-parallel-lint": "^0.9 || ^1.0"
+                "php-parallel-lint/php-parallel-lint": "^1.0"
             },
             "suggest": {
                 "ext-SimpleXML": "SimpleXML extension is required to analyze RIFF/WAV/BWF audio files (also requires `ext-libxml`).",
@@ -67,7 +67,7 @@
                 "php",
                 "tags"
             ],
-            "time": "2020-06-30T18:43:34+00:00"
+            "time": "2021-09-22T16:34:51+00:00"
         },
         {
             "name": "laminas/laminas-dom",
@@ -75,12 +75,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-dom.git",
-                "reference": "1c7101e5e54ce8912446ce97b9f278f2211e174c"
+                "reference": "9a13ce061a95a4951a8a4f565e03eb1c16f67e5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-dom/zipball/1c7101e5e54ce8912446ce97b9f278f2211e174c",
-                "reference": "1c7101e5e54ce8912446ce97b9f278f2211e174c",
+                "url": "https://api.github.com/repos/laminas/laminas-dom/zipball/9a13ce061a95a4951a8a4f565e03eb1c16f67e5f",
+                "reference": "9a13ce061a95a4951a8a4f565e03eb1c16f67e5f",
                 "shasum": ""
             },
             "require": {
@@ -124,7 +124,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-01-11T18:22:28+00:00"
+            "time": "2021-03-04T19:32:49+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
