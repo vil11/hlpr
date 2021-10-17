@@ -10,7 +10,6 @@
     }
   ],
   "require": {
-    "james-heinrich/getid3": "^1.9",
     "laminas/laminas-dom": "^2.7@dev",
     "php": ">=7.4.5"
   },
