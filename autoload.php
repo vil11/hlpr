@@ -1,6 +1,7 @@
 <?php
 
 //require_once('function/array.php');
+//require_once('function/combi.php');
 //require_once('function/directory.php');
 //require_once('function/exception.php');
 //require_once('function/metadata.php');
