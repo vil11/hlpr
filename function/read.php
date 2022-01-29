@@ -205,34 +205,36 @@ function getFolderSize(string $path): int
 }
 
 /**
- * [IN PROGRESS] Parse CSV file & convert pulled data to array of arrays.
+ * Parse CSV file & convert pulled data to array of arrays.
  * Function returns empty array if input file is empty.
  *
  * @param string $filePath
  * @param string $cellDelimiter
  * @return array
- * @throws Exception if input path is invalid
+ * @throws Exception if input file is invalid
+ *
+ * @tested 1.4.4
  */
-//function parseCsvTable($filePath, $cellDelimiter = ',')
-//{
-//    if (!isFileValid($filePath)) {
-//        throw new Exception("Path to [$filePath] is invalid.");
-//    }
-//
-//    $header = null;
-//    $data = [];
-//    $handle = fopen($filePath, 'r');
-//    while ($row = fgetcsv($handle, 1000, $cellDelimiter)) {
-//        if (!$header) {
-//            $header = $row;
-//        } else {
-//            $data[] = array_combine($header, $row);
-//        }
-//    }
-//    fclose($handle);
-//
-//    return $data;
-//}
+function parseCsvTable(string $filePath, string $cellDelimiter = ',')
+{
+    if (!isFileValid($filePath)) {
+        throw new Exception(sprintf('File "%s" is invalid.', $filePath));
+    }
+
+    $header = null;
+    $data = [];
+    $handle = fopen($filePath, 'r');
+    while ($row = fgetcsv($handle, 1000, $cellDelimiter)) {
+        if (!$header) {
+            $header = $row;
+        } else {
+            $data[] = array_combine($header, $row);
+        }
+    }
+    fclose($handle);
+
+    return $data;
+}
 
 /**
  * [IN PROGRESS] Get full record by 1 of its values.
