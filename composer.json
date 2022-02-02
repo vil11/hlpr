@@ -2,7 +2,7 @@
   "name": "vil11/hlpr",
   "description": "PHP micro-functional helper.",
   "license": "proprietary",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "authors": [
     {
       "name": "Dimon Dominator",
@@ -10,6 +10,7 @@
     }
   ],
   "require": {
+    "ext-mysqli": "*",
     "laminas/laminas-dom": "^2.7@dev",
     "php": ">=7.4.5"
   },

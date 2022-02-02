@@ -313,3 +313,23 @@ function addLog($logRecord, $logFilePath)
 //    $listAfterClearing = array_merge($duplications, array_diff($listBeforeClearing, $duplications));
 //    file_put_contents($logFilePath, implode("\r\n", $listAfterClearing));
 //}
+
+/**
+ * Execute sql from file.
+ *
+ * @param string $filePath
+ * @param mysqli $connection
+ *
+ * @return bool
+ *
+ * @tested 1.4.5
+ */
+function execSqlFile(string $filePath, mysqli $connection): bool
+{
+    $sql = file_get_contents($filePath);
+    if (!$sql) {
+        return false;
+    }
+
+    return $connection->multi_query($sql);
+}
