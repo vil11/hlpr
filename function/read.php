@@ -213,14 +213,10 @@ function getFolderSize(string $path): int
  * @return array
  * @throws Exception if input file is invalid
  *
- * @tested 1.4.4
+ * @tested 1.4.6
  */
 function parseCsvTable(string $filePath, string $cellDelimiter = ',')
 {
-    if (!isFileValid($filePath)) {
-        throw new Exception(sprintf('File "%s" is invalid.', $filePath));
-    }
-
     $header = null;
     $data = [];
     $handle = fopen($filePath, 'r');
