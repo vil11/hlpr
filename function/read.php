@@ -210,21 +210,26 @@ function getFolderSize(string $path): int
  *
  * @param string $filePath
  * @param string $cellDelimiter
+ * @param int $length
  * @return array
  * @throws Exception if input file is invalid
  *
- * @tested 1.4.6
+ * @tested 1.4.7
  */
-function parseCsvTable(string $filePath, string $cellDelimiter = ',')
+function parseCsvTable(string $filePath, int $length = 1000, string $cellDelimiter = ',')
 {
-    $header = null;
     $data = [];
+    $header = null;
+    $line = 0;
+
     $handle = fopen($filePath, 'r');
-    while ($row = fgetcsv($handle, 1000, $cellDelimiter)) {
+    while ($row = fgetcsv($handle, $length, $cellDelimiter)) {
+        $line++;
+
         if (!$header) {
             $header = $row;
         } else {
-            $data[] = array_combine($header, $row);
+            $data[$line] = array_combine($header, $row);
         }
     }
     fclose($handle);
